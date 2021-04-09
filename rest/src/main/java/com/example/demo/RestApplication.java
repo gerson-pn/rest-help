@@ -26,9 +26,7 @@ public class RestApplication {
 		
 		@Override
 		public void run(ApplicationArguments args) throws Exception {
-			
-			System.out.println("foi....");
-			
+						
 			Usuario u1 = new Usuario();
 			u1.setNome("Gerson");
 

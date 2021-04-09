@@ -21,44 +21,18 @@ public class Controle {
 
 	@GetMapping("/")
 	public void start() {
-//		Usuario u1 = new Usuario();
-//		u1.setNome("Gerson");
-//
-//		Perfil p = new Perfil();
-//		p.setNome("programador");
-//		
-//		Perfil p2 = new Perfil();
-//		p2.setNome("front-end");
-//
-//		u1.getPerfil().add(p);
-//		u1.getPerfil().add(p2);
-//		
-//		
-//		p.setUsuario(u1);
-//		p2.setUsuario(u1);
-//		
-//		
-//		rp.save(u1);
-
 	}
 
-	@PostMapping("/inserir-perfil/")
-	public void inserir(Perfil perfil) {
+	@PostMapping("/inserir-perfil")
+	public void inserir( Perfil perfil) {
 		System.out.println(perfil.getNome());
-//		Usuario u1 = rp.getOne(id);
-//
-//		Perfil p = new Perfil();
-//		p.setNome("programador");
-//
-//		p.setUsuario(u1);
-//		u1.setPerfil(p);
-//		fp.save(p);
 
 	}
 
 	@GetMapping("/usuarios")
 	public List<Usuario> usuarios() {
-		return rp.findAll();
+		List<Usuario> usuarios = rp.findAll();
+		return usuarios;
 	}
 
 	@GetMapping("/perfis")
