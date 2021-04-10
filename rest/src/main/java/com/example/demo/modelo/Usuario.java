@@ -24,7 +24,9 @@ public class Usuario {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	private Long id; // <-- aqui eu resolvi usar um Long, mas poderia ser um long (com o L
+						// minúsculo). Isto causou o tratamento no controle de ter que inserir um id = 0
+						// para o hibernate não gerar um problema.
 
 	@Column
 	private String nome;
